@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+
+
+#wrapper{
+   padding-bottom: 10rem;
+   position: relative;
+    width: 70%;
+    margin: 0 auto;
+    background-color:white;
+}
+header div{
+    display: flex;
+    margin-left: 6rem;
+    flex-direction: row;
+}
+
+ #contact{
+    position: absolute;
+    top: 0;
+    right:15%;
+    padding-top: 10px;
+ }
+header{
+    background-color: lightgrey;
+}
+.contact{
+display: flex;
+justify-content: space-around;
+width: 600px;
+
+}
+.contact dt {
+width: 20%;
+padding-left: 8px;
+padding: 2px;
+background-color: red;
+}
+.contact dd{
+    background-color: black;
+    width: 80%;
+    padding-left: 40px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1f);
+    row-gap: 100px;
+    margin-top: 6rem;
+    column-gap: 50px;
+}
+
+ 
+ #contact h3 {
+    display: none;
+ }
+ 
+ h3 {
+    position: relative; 
+    display: flex ;
+    padding-left: 30px;
+     
+        
+ }
+ h3::before{
+    content: "";
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    top:0;
+    left: 0;
+    background-color: red;
+    border-radius: 50%;
+}
+.skills-primary .skill,
+.skills-secondary .skill {
+    background-color: gray;
+    color: #eee;
+    font-weight: 600;
+    position: relative;
+    margin-top: 10px;
+    line-height: 2.5;
+    padding-left: 15px;
+    z-index: 1;
+}
+.skills-primary .skill {
+    background-color: gray;
+}
+.skills-secondary .skill {
+    background-color: lightgray;
+}
+
+.skills-primary .skill::before,
+.skills-secondary .skill::before {
+    position: absolute;
+    content: "";
+    height: 80%;
+    top: 0;
+    left: 0;
+    margin-top: 4px;
+    margin-left: 5px;
+    z-index: -1;
+}
+
+ 
+
+.skills div:nth-child(1)::before {
+    background-color: red;
+}
+
+div[data-skill="3"]::before {
+    background-color: red;
+    width: 30%;
+}
+div[data-skill="1"]::before {
+    width: 60%;
+    background-color: red;
+}
+div[data-skill="9"]::before {
+    width: 20%;
+    background-color: rgba(255, 0, 0, 0.526) !important;
+}
+div[data-skill="5"]::before {
+    width: 50%;
+    background-color: rgba(255, 0, 0, 0.526);
+}
+div[data-skill="7"]::before {
+    width: 25%;
+    background-color: rgba(255, 0, 0, 0.526);
+}
+
+.skills-secondary {
+    margin-top: 30px;
+}
+
+.experience {
+    margin-top: 0.8rem;
+}
+.experience-details {
+    margin-left: 10px;
+    line-height: 1.5;
+}
+.experience-type,
+.experience-institution {
+    color: red;
+    font-size: large;
+}
+.experience-institution {
+    font-weight: 400;
+}
+.experience-date,
+.experience-location {
+    color: gray;
+}
+.experience-date-separator {
+    color: red;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+    header div {
+        display: flex;
+        margin-left: 1rem;
+    }
+    #wrapper {
+        width: 100%;
+        padding-bottom: 6rem;
+    }
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contacts {
+        width: 85%;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        margin: 5px auto;
+    }
+    header div {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 992px) and (max-width: 1200px)  {
+    header div {
+        display: flex;
+        margin-left: 1rem;
+    }
+    #wrapper{
+        width: 90%;
+        padding-bottom: 10rem;
+    }
+    .contacts {
+        width: 85%;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        margin: 5px auto;
+    }
+}
+
+@media (min-width:768px) and (max-width:2000px) {
+    #wrapper {
+        width:90% !important;
+    }
+}
+figure{
+   height: 110px;
+   width: 110px;
+}
+figure img {
+   object-fit: contain;
+   height: 100%;
+   width: 100%;
+}
